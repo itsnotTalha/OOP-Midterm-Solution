@@ -22,7 +22,7 @@ class Person {
         s++;
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Person p = new Person(1, "N");
         Person p1 = new Person();
         System.out.println(p1.s);
