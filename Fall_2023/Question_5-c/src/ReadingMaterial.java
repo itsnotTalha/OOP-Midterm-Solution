@@ -44,3 +44,18 @@ class Book extends ReadingMaterial {
         System.out.println("Genre: " + genre);
     }
 }
+//child class
+class Magazine extends ReadingMaterial{
+    private int issueNumber;
+    public Magazine(String title, String author, int year, int issueNumber){
+        super(title,author,year);
+        this.issueNumber=issueNumber;
+    }
+    //method overriding
+    void displayDetails() {
+        System.out.println("Title: " + getTitle());
+        System.out.println("Author: " + getAuthor());
+        System.out.println("Year: " + getYear());
+        System.out.println("Issue Number: " + issueNumber);
+    }
+}
