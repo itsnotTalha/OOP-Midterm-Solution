@@ -3,12 +3,14 @@ abstract class ReadingMaterial {
     private String author;
     private int year;
 
+    //constructor with parameter
     public ReadingMaterial(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
     }
 
+    //get methods
     public String getTitle() {
         return title;
     }
@@ -22,4 +24,23 @@ abstract class ReadingMaterial {
     }
 
     abstract void displayDetails();
+}
+
+//child class
+class Book extends ReadingMaterial {
+    private String genre;
+
+    //constructor with parameter
+    public Book(String title, String author, int year, String genre) {
+        super(title, author, year);
+        this.genre = genre;
+    }
+
+    //method overriding
+    void displayDetails() {
+        System.out.println("Title: " + getTitle());
+        System.out.println("Author: " + getAuthor());
+        System.out.println("Year: " + getYear());
+        System.out.println("Genre: " + genre);
+    }
 }
